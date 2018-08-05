@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Article extends JsonResource
+class Picture extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,15 +17,8 @@ class Article extends JsonResource
         // return parent::toArray($request);
         return [
             'id' => $this->id,
-            'title' => $this->title,
-            'body' => $this->body
-        ];
-    }
-
-    public function with($request) {
-        return [
-            'version' => '1.0.0',
-            'author_url' => url('github.com/ehzawad')
+            'picture' => $this->picture,
+            'description' => $this->description
 
         ];
     }
